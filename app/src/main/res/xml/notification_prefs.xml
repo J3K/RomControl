@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+      <PreferenceCategory android:layout="@layout/preferences_category" android:title="Notification">
+          <SwitchPreference android:title="Make Ongoing Notifications Removable" android:key="ongoing_notifications" android:defaultValue="false" android:summaryOn="Ongoing Notifications are removeable" android:summaryOff="Ongoing Notifications are permanent" />
+          <SwitchPreference android:title="Heads Up Notifications" android:key="heads_up_notifications_enabled" android:defaultValue="0" android:summaryOn="Heads Up disabled" android:summaryOff="Heads Up enabled" />
+      </PreferenceCategory>
+      <PreferenceCategory android:layout="@layout/preferences_category" android:title="Lockscreen">
+          <com.wubydax.romcontrol.prefs.MyListPreference android:entries="@array/lockscreen_notif_entries" android:title="Notifications Shown on Lockscreen" android:key="lockscreen_notifications" android:defaultValue="2" android:summary="Number shown on lockscreen" android:entryValues="@array/lockscreen_notif_values" android:widgetLayout="@layout/round_more_icon" />
+      </PreferenceCategory>
+      <PreferenceCategory android:layout="@layout/preferences_category" android:title="Color">
+          <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Notification Background Color" android:key="notification_background_color" android:summary="Default color is #fffafafa" android:defaultValue="-1" hexValue="true" alphaSlider="true" />
+          <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Notification Text Color" android:key="pulldown_text" android:summary="Default color is #ff000000" android:defaultValue="-14606047" hexValue="true" />
+      </PreferenceCategory>
+</PreferenceScreen>

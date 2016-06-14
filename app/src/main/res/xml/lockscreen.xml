@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+  <PreferenceScreen android:title="Lockscreen" android:summary="Choose color,Time,Date and Font" android:widgetLayout="@layout/round_more_icon" >
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Color and Font">
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference alphaSlider="true" hexValue="true" android:title="Next Alarm Text Color" android:key="next_alarm_color" android:summary="Choose color" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:defaultValue="0" alphaSlider="true" hexValue="true" android:title="Lockscreen Pinpad Background" android:key="keypad_button_color" android:summary="Choose pinpad button color" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color hours" android:key="kg_clock_hours_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true"  />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color minutes" android:key="kg_clock_minutes_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Text Color seconds Hours" android:key="kg_clock_second_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="The color of the date text" android:key="kg_date_color" android:summary="Choose a color" android:defaultValue="\#ffffffff" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.MyListPreference android:defaultValue="5" android:entries="@array/lockscreen_font_style_entries" android:title="Clock Font Style" android:key="lockscreen_clock_font_style" android:entryValues="@array/lockscreen_font_style_values" android:widgetLayout="@layout/round_more_icon" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Clock Seconds">
+       <SwitchPreference android:key="lock_seconds" android:summaryOff="Off" android:summaryOn="On" android:title="Add Clock Seconds" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category"  android:title="Next Alarm Lockscreen">
+         <SwitchPreference android:title="Next Alarm" android:key="next_alarm" android:summaryOn="Hide" android:summaryOff="Show" android:defaultValue="false" />
+    </PreferenceCategory>
+  </PreferenceScreen>
+    <PreferenceCategory android:layout="@layout/preferences_category"  android:title="Album Art Lockscreen">
+         <SwitchPreference android:title="Lockscreen Album Art" android:key="hide_album_art" android:summaryOn="Lockscreen Album Art Hidden" android:summaryOff="Lockscreen Album Art Shown" />
+    </PreferenceCategory>
+</PreferenceScreen>

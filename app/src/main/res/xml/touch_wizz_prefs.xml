@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title=" Choose your TouchWizz">
+        <PreferenceScreen android:title="Stock Tw Launcher" android:key="script#tw" android:summary="Phone will be reboot after your select" />
+        <PreferenceScreen android:title="5x6 Home 5x6 app" android:key="script#tw5" android:summary="Phone will be reboot after your select" />
+        <PreferenceScreen android:title="6x6 Home 6x6 app" android:key="script#tw6" android:summary="Phone will be reboot after your select" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Themes Chooser">
+        <PreferenceScreen android:key="mobi.xperiacle.touchwiz.themer.IconThemer" android:summary="Opens Galaxy Icon Themer" android:title="Choose your launcher icon " />
+        <PreferenceScreen android:key="com.sec.android.app.themechooser.MainTabActivity" android:summary="Opens Theme chooser for Touchwizz" android:title="Choose your theme for Touchwizz UI" />
+    </PreferenceCategory>
+</PreferenceScreen>

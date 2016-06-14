@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dropdown">
+        <SwitchPreference android:title="Quickconnect Panel" android:key="quick_connect_toggle" android:summaryOn="Panel is shown" android:summaryOff="Panel is hidden" android:defaultValue="false" />
+        <SwitchPreference android:title="Notification Brightness Visibility" android:key="notification_panel_brightness_adjustment" android:defaultValue="true" android:summaryOn="Brightness slider is visible" android:summaryOff="Brightness slider hidden" />
+        <SwitchPreference android:title="Show/Hide Device Info" android:key="micky_device" android:defaultValue="false" android:summaryOn="Device Info shown" android:summaryOff="Device Info hidden" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Device Info Header Color" android:key="device_info_color" android:defaultValue="-4194304" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Device Info Info Color" android:key="device_info_color2" android:defaultValue="-13443329" alphaSlider="true" hexValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Dropdown Customization">
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Header Bg Color" android:key="header_bg_color" android:summary="Default color is #ff3ba0bf" android:defaultValue="-12869441" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Sfinder Bg Color" android:key="sfinder_bg_color" android:summary="Default color is #ff1b6e90" android:defaultValue="-14979440" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Brightness Slider Bg Color" android:key="slider_bg_color" android:summary="Default color is #ff3ba0bf" android:defaultValue="-12869441" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Brightness Back at-use Color" android:key="brightness_bg_color" android:summary="Default color is #ffeeff41" android:defaultValue="-1048767" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Expanded Clock Color" android:key="expanded_clock_col" android:summary="Set pulldown clock color" android:defaultValue="@android:color/holo_blue_light" hexValue="true" alphaSlider="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Expanded Date Color" android:key="expanded_date_col" android:summary="Set pulldown date color" hexValue="true" alphaSlider="true"    />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Expanded Buttons Color" android:key="expanded_btn_col" android:summary="Set pulldown Icons color" hexValue="true" alphaSlider="true"  />
+        <PreferenceScreen android:title="Custom Pulldown Backgrounds" android:summary="Choose your custom background" android:widgetLayout="@layout/round_more_icon">
+            <PreferenceCategory android:layout="@layout/preferences_category" android:title="BACKGROUND IMAGE SELECTION" />
+                 <PreferenceScreen android:dependency="enable_custom_bg" android:key="notification_panel_bg" android:title="Select Image"/>
+                        <com.wubydax.romcontrol.prefs.SeekBarPreference min="0" android:defaultValue="255" android:dependency="enable_custom_bg" android:key="notification_panel_alpha" android:max="255" android:title="Image opacity"/>
+                        <SwitchPreference android:defaultValue="true" android:key="enable_custom_bg" android:summaryOff="Custom bg disabled" android:summaryOn="Custom bg enabled" android:title="Custom Background"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:layout="@layout/preferences_category" android:title="Toggle Customization">
+        <com.wubydax.romcontrol.prefs.MyListPreference android:entries="@array/toggle_entries" android:title="Visible Toggles Shown" android:key="toggle_number" android:defaultValue="6" android:entryValues="@array/toggle_values" android:widgetLayout="@layout/round_more_icon" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Toggle Bg Color" android:key="toggle_bg_color" android:summary="Default color is #ff3ba0bf" android:defaultValue="-16734780" alphaSlider="true" hexValue="true" />
+        <SwitchPreference android:title="Toggle Text Preference" android:key="tiles_text_visibility" android:summaryOn="Text is shown" android:summaryOff="Text is hidden" android:defaultValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Toggle Text Color" android:key="toggle_text_color" android:summary="Default color is #ffffffff" android:defaultValue="-328966" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ThumbnailListPreference android:defaultValue="0" android:key="toggle_buttons_background" android:title="Toggles BackGround" app:drawableArray="@array/toggle_drawables" app:entryList="@array/toggle_buttons_background_entries" app:entryValuesList="@array/toggle_buttons_background_values" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Toggle Color" android:key="toggle_on_color" android:defaultValue="-5444864" alphaSlider="true" hexValue="true" />
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Toggle Off Color" android:key="toggle_icon_off_color" android:defaultValue="1293831800" hexValue="true" alphaSlider="true" android:summary="Set toggle Off color"/>
+        <com.wubydax.romcontrol.prefs.ColorPickerPreference android:title="Toggle Circle Color" android:key="toggle_buttons_background_color" android:defaultValue="-1" alphaSlider="true" hexValue="true" android:widgetLayout="@layout/round_more_icon"/>
+    </PreferenceCategory>
+</PreferenceScreen>

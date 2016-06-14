@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <PreferenceScreen android:title="Incall" android:widgetLayout="@layout/round_more_icon" >
+        <PreferenceCategory android:layout="@layout/preferences_category"  android:title="Color">
+           <com.wubydax.romcontrol.prefs.ThumbnailListPreference app:entryDefault="0" android:key="incall_background" android:title="Toggles BackGround" app:drawableArray="@array/incall_drawables" app:entryList="@array/incall_background_entries" app:entryValuesList="@array/incall_background_values" />
+           <com.wubydax.romcontrol.prefs.ColorPickerPreference alphaSlider="true" hexValue="true" android:title="Incall Dialpad Digits" android:key="incall_digit_color" android:summary="Choose incall dialpad digit color" />
+           <com.wubydax.romcontrol.prefs.ColorPickerPreference alphaSlider="true" hexValue="true" android:title="Incall Dialpad Letters" android:key="incall_letter_color" android:summary="Choose incall dialpad letter color" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="Spoke and Message">
+            <SwitchPreference android:title="Remove Last spoke" android:key="last_spoke" android:summaryOn="Option will not be shown" android:summaryOff="Option is shown" />
+            <SwitchPreference android:title="Remove Last message" android:key="last_message" android:summaryOn="Option will not be shown" android:summaryOff="Option is shown" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Dialpad" android:widgetLayout="@layout/round_more_icon" >
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="DialPad">
+            <com.wubydax.romcontrol.prefs.ColorPickerPreference alphaSlider="true" hexValue="true" android:title="Dialpad Digits" android:key="main_digit_color" android:summary="Choose dialpad digit color" />
+            <com.wubydax.romcontrol.prefs.ColorPickerPreference alphaSlider="true" hexValue="true" android:title="Dialpad Letters" android:key="main_letter_color" android:summary="Choose dialpad letter color" />
+        </PreferenceCategory>
+        <PreferenceCategory android:layout="@layout/preferences_category" android:title="DiapPad Background">
+            <CheckBoxPreference android:title="Dialer Background Switcher" android:key="dialer_background_switcher"  />
+            <com.wubydax.romcontrol.prefs.ThumbnailListPreference app:drawableArray="@array/dialer_drawables" app:entryList="@array/dialer_background_style_entries" android:title="Dialer Background Style" android:key="dialer_background_style" app:entryValuesList="@array/dialer_background_style_values" android:dependency="dialer_background_switcher" />
+            <com.wubydax.romcontrol.prefs.ColorPickerPreference  android:title="Dialer Background Color" android:key="dialer_background_color" hexValue="true" alphaSlider="true" />
+            <com.wubydax.romcontrol.prefs.ColorPickerPreference  android:title="Edit Text Color" android:key="edit_color_text" hexValue="true" />
+            <com.wubydax.romcontrol.prefs.ColorPickerPreference  android:title="Text Background Color" android:key="edittext_bg" hexValue="true" alphaSlider="true" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen>
